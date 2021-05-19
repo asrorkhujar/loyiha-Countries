@@ -1,0 +1,335 @@
+/* nunito-sans-300 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/nunito-sans-v6-latin-300.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/nunito-sans-v6-latin-300.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/nunito-sans-v6-latin-300.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-300.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-300.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/nunito-sans-v6-latin-300.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+/* nunito-sans-regular - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/nunito-sans-v6-latin-regular.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/nunito-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/nunito-sans-v6-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-regular.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-regular.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/nunito-sans-v6-latin-regular.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+/* nunito-sans-600 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/nunito-sans-v6-latin-600.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/nunito-sans-v6-latin-600.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/nunito-sans-v6-latin-600.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-600.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-600.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/nunito-sans-v6-latin-600.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+/* nunito-sans-800 - latin */
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/nunito-sans-v6-latin-800.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/nunito-sans-v6-latin-800.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/nunito-sans-v6-latin-800.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-800.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/nunito-sans-v6-latin-800.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/nunito-sans-v6-latin-800.svg#NunitoSans") format("svg"); /* Legacy iOS */
+}
+
+
+
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  background-color: #F2F2F2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+
+/* Site header */
+
+.world-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+
+
+.site-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-link {
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.header-link:hover {
+  opacity: 0.6;
+}
+
+.header-text {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  margin: 0;
+  color: #111517;
+}
+
+.header-switch {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #111517;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.header-switch:hover {
+  opacity: 0.6;
+}
+
+.header-switch::before {
+  content: "";
+  display: block;
+  background-image: url("../img/dark.svg");
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+/* SITE MAIN */
+
+.site-main {
+  padding-top: 48px;
+  background-color: rgb(249, 249, 249);
+}
+
+.site-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-input {
+  padding: 18px 74px;
+  width: 480px;
+  outline: none;
+  border: 1px solid transparent;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  background-image: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: left calc(35px) center;
+  transition: border 0.3s ease,
+  opacity 0.3s ease;
+}
+
+.search-input:hover {
+  border: 1px solid #848484;
+  opacity: 0.7;
+}
+
+.search-input:active {
+  border: 1px solid #848484;
+  opacity: 0.7;
+}
+
+.search-input:focus {
+  border: 1px solid #848484;
+  opacity: 0.7;
+}
+
+.search-input::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #848484;
+}
+
+.select-countries {
+  padding: 18px;
+  width: 200px;
+  outline: none;
+  border: 1px solid transparent;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111517;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border 0.3s ease,
+  opacity 0.3s ease;
+}
+
+.select-countries:hover {
+  border: 1px solid #848484;;
+  opacity: 0.7;
+}
+
+.select-countries:active {
+  border: 1px solid #848484;
+  opacity: 0.7;
+}
+
+.select-countries:focus {
+  border: 1px solid #848484;
+  opacity: 0.7;
+}
+
+.select-option {
+  border: none;
+}
+
+/* Countries */
+
+.country-bloks {
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.country-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 63px;
+  padding-bottom: 46px;
+  width: 264px;
+  background-color: #fff;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease,
+  border 0.5s ease;
+}
+
+.country-list:hover {
+  box-shadow: none;
+}
+
+.country-img {
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.country-title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111517;
+}
+
+.country-content {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111517;
+}
+
+.mini-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111517;
+}
+
+.country-items {
+  margin-left: 24px;
+}
+
+.country-items:nth-child(2) {
+  margin-top: 24px;
+}
+
+.country-items:nth-child(3) {
+  margin-top: 16px;
+}
+
+.country-items:nth-child(4),.country-item:nth-child(5) {
+  margin-top: 8px;
+}
+
