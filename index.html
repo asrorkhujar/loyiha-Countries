@@ -18,12 +18,13 @@
       <a class="header-link" href="#">
         <img src="./img/logo.svg" alt="logo site" width="234" height="33" >
       </a>
-      <button class="header-switch" type="button">Dark mode</button>
+      <button class="header-switch" type="button" id="theme-button">Dark mode</button>
     </div>
 
   </header>
   <main class="site-main">
     <div class="container site-main-all">
+      <h1 class="visually-hidden">Rest Countries API - find any country and get about it</h1>
       <form class="site-form" action="https://echo.htmlacademy.ru" method="GET">
         <input class="search-input" type="search" name="search" aria-label="search countries"
         placeholder="Search for a country…" autocomplete="off">
@@ -181,6 +182,14 @@
 
     </div>
   </main>
+
+  <script type="text/javascript">
+    const themeBtn = document.querySelector('#theme-button');
+
+    themeBtn.addEventListener('click', () => {
+      document.body.classList.toggle('theme-dark')
+    })
+  </script>
 
 </body>
 

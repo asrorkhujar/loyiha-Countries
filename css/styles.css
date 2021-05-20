@@ -1,24 +1,57 @@
-/* nunito-sans-300 - latin */
+:root {
+  --color-primary: #fff;
+  --color-secondary: #f2f2f2;
+  --color-text-primary: #111517;
+  --color-text-placeholder: var(--color-text-placeholder);
+}
+
+.theme-dark {
+  --color-primary: #2B3844;
+  --color-secondary: #202C36;
+  --color-text-primary: #fff;
+  --color-text-placeholder: #fff;
+}
+
+.theme-dark .theme-btn {
+  background-image: url('../img/icon-moon-dark.svg');
+}
+
+.theme-dark .countries-search {
+  background-image: url('../img/icon-search-dark.svg');
+}
+
+.theme-dark .countries-dropdown {
+  background-image: url('../img/icon-arrow-bottom-dark.svg');
+}
+
+
+
+
+
+
+
+
+
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/nunito-sans-v6-latin-300.eot");
-  /* IE9 Compat Modes */
+
   src:
   url("../fonts/nunito-sans-v6-latin-300.eot?#iefix") format("embedded-opentype"),
-  /* IE6-IE8 */
+
   url("../fonts/nunito-sans-v6-latin-300.woff2") format("woff2"),
-  /* Super Modern Browsers */
+
   url("../fonts/nunito-sans-v6-latin-300.woff") format("woff"),
-  /* Modern Browsers */
+
   url("../fonts/nunito-sans-v6-latin-300.ttf") format("truetype"),
-  /* Safari, Android, iOS */
+
   url("../fonts/nunito-sans-v6-latin-300.svg#NunitoSans") format("svg");
-  /* Legacy iOS */
+
 }
 
-/* nunito-sans-regular - latin */
+
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -38,7 +71,7 @@
   /* Legacy iOS */
 }
 
-/* nunito-sans-600 - latin */
+/
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -58,7 +91,7 @@
   /* Legacy iOS */
 }
 
-/* nunito-sans-800 - latin */
+
 @font-face {
   font-family: "Nunito Sans";
   font-style: normal;
@@ -111,7 +144,10 @@ body {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  background-color: #F2F2F2;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  transition: color .3s ease,
+    background-color .3s ease;
 }
 
 img {
@@ -138,7 +174,9 @@ img {
   padding-top: 24px;
   padding-bottom: 24px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  background-color:  var(--color-primary);
+  transition: color .3s ease,
+  background-color .3s ease;
 }
 
 
@@ -149,7 +187,9 @@ img {
 }
 
 .header-link {
-  text-decoration: none;
+  /* background-image: url("../img/logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain; */
   transition: opacity 0.3s ease;
 }
 
@@ -162,7 +202,7 @@ img {
   font-size: 24px;
   line-height: 33px;
   margin: 0;
-  color: #111517;
+  color: var(--color-text-primary)
 }
 
 .header-switch {
@@ -171,11 +211,11 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  background-color: #fff;
+  background-color: var(--color-primary);
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
-  color: #111517;
+  color: var(--color-text-primary);
   text-transform: capitalize;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -184,6 +224,26 @@ img {
 .header-switch:hover {
   opacity: 0.6;
 }
+
+/* .theme-button {
+  padding-left: 28px;
+  background-color: transparent;
+  background-image: url("../img/icon-moon-light.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .3s ease,
+    background-color .3s ease;
+} */
+
+
+
 
 .header-switch::before {
   content: "";
@@ -199,7 +259,7 @@ img {
 
 .site-main {
   padding-top: 48px;
-  background-color: rgb(249, 249, 249);
+  background-color: var(--color-secondary);
 }
 
 .site-form {
@@ -214,28 +274,28 @@ img {
   width: 480px;
   outline: none;
   border: 1px solid transparent;
-  background: #fff;
+  background: var(--color-primary);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
-  background-image: url("../img/search.svg");
+  background-image: url("../img/icon-search-light.svg");
   background-repeat: no-repeat;
   background-position: 35px center;
-  transition: border 0.3s ease,
-  opacity 0.3s ease;
+  transition: color .3s ease,
+    background-color .3s ease;
 }
 
 .search-input:hover {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   opacity: 0.7;
 }
 
 .search-input:active {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   opacity: 0.7;
 }
 
 .search-input:focus {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   opacity: 0.7;
 }
 
@@ -243,19 +303,19 @@ img {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #848484;
+  color: var(--color-text-placeholder);
 }
 
 .select-countries {
-  padding: 18px;
+  padding: 18px 24px;
   min-width: 200px;
   outline: none;
-  border: 1px solid transparent;
+  border: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #111517;
-  background-color: #fff;
+  color: var(--color-text-primary);
+  background-color: var(--color-primary);
   box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   cursor: pointer;
@@ -263,18 +323,18 @@ img {
 }
 
 .select-countries:hover {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   ;
   opacity: 0.7;
 }
 
 .select-countries:active {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   opacity: 0.7;
 }
 
 .select-countries:focus {
-  border: 1px solid #848484;
+  border: 1px solid var(--color-text-placeholder);
   opacity: 0.7;
 }
 
@@ -286,7 +346,6 @@ img {
 
 .country-bloks {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -295,7 +354,6 @@ img {
 
 .country-list {
   list-style: none;
-  height: 100%;
   margin: 0;
   padding: 0;
   padding-bottom: 46px;
@@ -304,13 +362,13 @@ img {
   width: 264px;
   flex-grow: 1;
   /* height: 336px; */
-  background-color: #fff;
+  background-color: var(--color-primary);
   box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
   border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
-  transition: box-shadow 0.3s ease,
-  border 0.5s ease;
+  transition: color .3s ease,
+    background-color .3s ease;
 
 }
 
@@ -325,6 +383,7 @@ img {
   margin: 0;
   padding: 0;
   margin-bottom: 24px;
+  display: block;
 }
 
 
@@ -333,7 +392,7 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 26px;
-  color: #111517;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -343,14 +402,14 @@ img {
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  color: #111517;
+  color: var(--color-text-primary);
 }
 
 .country-text {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  color: #111517;
+  color: var(--color-text-primary);
 }
 
 .country-items {
