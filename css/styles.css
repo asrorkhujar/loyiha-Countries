@@ -188,7 +188,7 @@ img {
 .header-switch::before {
   content: "";
   display: block;
-  background-image: url("../img/dark.svg");
+  background-image: url("../img/icon-moon-light.svg");
   width: 18px;
   height: 18px;
   margin-right: 10px;
